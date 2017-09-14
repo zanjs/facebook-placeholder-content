@@ -1,6 +1,20 @@
 <template>
 <div class="hello">
-  component
+
+
+
+  <div class="container">
+    <div class="animated-background size1"></div>
+  </div>
+
+  <div class="container column">
+    <div class="animated-background"></div>
+    <div class="animated-background"></div>
+    <div class="animated-background"></div>
+  </div>
+
+
+
 </div>
 </template>
 
@@ -16,7 +30,20 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style>
+<style scoped>
+.container {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
 .size1 {
   flex-basis: 100px
 }
@@ -39,6 +66,29 @@ export default {
 
 .size6 {
   flex-basis: 600px
+}
+.size8 {
+  flex-basis: 800px
+}
+
+.size8 {
+  flex-basis: 800px
+}
+
+.size9 {
+  flex-basis: 900px
+}
+
+.size10 {
+  flex-basis: 1000px
+}
+
+.size11 {
+  flex-basis: 1100px
+}
+
+.size12 {
+  flex-basis: 1200px
 }
 
 .flex1 {
@@ -65,17 +115,6 @@ export default {
   flex-grow: 6
 }
 
-
-.loader-container {
-  margin: 0 auto;
-  width: 400px;
-  max-width: 90%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center
-}
-
 @keyframes placeholder {
   0% {
     background-position: -600px 0
@@ -95,7 +134,6 @@ export default {
   background: linear-gradient(to right, #ddd 8%, #ccc 18%, #ddd 33%);
   background-size: 1200px 100px;
   min-height: 30px;
-  width: 100%;
   margin: 5px 5px 5px 0;
   border-radius: 3px;
   opacity: .5
