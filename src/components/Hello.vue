@@ -1,8 +1,6 @@
 <template>
 <div class="hello">
 
-
-
   <div class="example example1">
     <label for="">Simple content</label>
     <placeholderContent type="simple" :title="true" :number="3" :button="true"></placeholderContent>
@@ -31,12 +29,30 @@
     </div>
   </div>
 
-
   <div class="example example5">
     <label for="">Card content</label>
     <div class="container wrap">
       <div class="col-12 col-xl-4 col-lg-4 col-md-6 col-sm-12 box" v-for="x in 3">
         <placeholderContent type="card" :photo="true" :title="true" :description="false" :number="1" :button="false"></placeholderContent>
+      </div>
+    </div>
+  </div>
+
+  <div class="example example6">
+    <label for="">Card content</label>
+    <div class="container wrap">
+      <div class="col-12 col-xl-4 col-lg-4 col-md-6 col-sm-12 box" v-for="x in 3">
+        <placeholderContent type="card" :photo="false" :title="true" :description="false" :number="1" :button="false"></placeholderContent>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="example example7">
+    <label for="">Card content</label>
+    <div class="container wrap">
+      <div class="col-12 col-xl-4 col-lg-4 col-md-6 col-sm-12 box" v-for="x in 3">
+        <placeholderContent type="card" :photo="true" :title="false" :description="true" :number="2" :button="false" :head="false"></placeholderContent>
       </div>
     </div>
   </div>
@@ -62,7 +78,7 @@ export default {
 
 
 <style scoped>
-@import '../../node_modules/the-grid-flexbox/css/the-grid.min.css';
+
 .box {
   padding: 20px;
   box-sizing: border-box;

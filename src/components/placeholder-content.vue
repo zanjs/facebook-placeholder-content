@@ -14,63 +14,46 @@
   </div>
 
 
-
   <div v-if="type === 'table'">
     <div class="container justify-content-between" v-show="title">
       <div class="animated-background size2"></div>
       <div class="animated-background size1" v-show="buttonTitle"></div>
     </div>
-
     <div class="container">
       <div class="animated-background flex1 "></div>
     </div>
-
     <div class="container" v-for="x in number">
       <div class="animated-background size1"></div>
       <div class="animated-background size2 flex1"></div>
     </div>
-
     <div class="container justify-content-end" v-show="button">
       <div class="animated-background size1"></div>
     </div>
   </div>
 
-
-
-
   <div v-if="type === 'card'">
-    <div class="container justify-content-center align-items-center" >
+    <div class="container justify-content-center align-items-center" v-show="head">
       <div class="animated-background picture"></div>
       <div class="flex1 container wrap" v-show="title">
         <div class="animated-background size6"></div>
         <div class="animated-background size1"></div>
       </div>
     </div>
-
     <div class="container" v-show="photo">
       <div class="animated-background photo flex1"></div>
     </div>
-
     <div v-show="description">
       <div class="container" v-for="x in number">
         <div class="animated-background flex1"></div>
       </div>
-
       <div class="container">
         <div class="animated-background size1"></div>
       </div>
     </div>
-
     <div class="container" v-show="button">
       <div class="animated-background size1"></div>
     </div>
   </div>
-
-
-
-
-
-
 
 </div>
 </template>
@@ -114,12 +97,16 @@ export default {
       type: Boolean,
       required: false,
       default: true
+    },
+    head: {
+      type: Boolean,
+      required: false,
+      default: true
     }
   }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .container {
   display: flex
@@ -308,13 +295,15 @@ export default {
   border-radius: 3px;
   opacity: .5
 }
+
 .picture {
-  height: 80px;
-  width: 80px;
+  height: 60px;
+  width: 60px;
   border-radius: 50%;
   margin-right: 20px
 }
+
 .photo {
-  height: 300px;
+  height: 200px;
 }
 </style>
