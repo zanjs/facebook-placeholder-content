@@ -1,17 +1,74 @@
 <template>
-<div class="hello">
+<div>
 
-
-
-  <div class="container">
-    <div class="animated-background size1"></div>
+  <div v-if="type === 'simple'">
+    <div class="container" v-show="title">
+      <div class="animated-background size2"></div>
+    </div>
+    <div class="container wrap">
+      <div class="animated-background size12" v-for="x in number"></div>
+    </div>
+    <div class="container justify-content-end" v-show="button">
+      <div class="animated-background size1"></div>
+    </div>
   </div>
 
-  <div class="container wrap">
-    <div class="animated-background size12"></div>
-    <div class="animated-background size12"></div>
-    <div class="animated-background size12"></div>
+
+
+  <div v-if="type === 'table'">
+    <div class="container justify-content-between" v-show="title">
+      <div class="animated-background size2"></div>
+      <div class="animated-background size1" v-show="buttonTitle"></div>
+    </div>
+
+    <div class="container">
+      <div class="animated-background flex1 "></div>
+    </div>
+
+    <div class="container" v-for="x in number">
+      <div class="animated-background size1"></div>
+      <div class="animated-background size2 flex1"></div>
+    </div>
+
+    <div class="container justify-content-end" v-show="button">
+      <div class="animated-background size1"></div>
+    </div>
   </div>
+
+
+
+
+  <div v-if="type === 'card'">
+    <div class="container justify-content-center align-items-center" >
+      <div class="animated-background picture"></div>
+      <div class="flex1 container wrap" v-show="title">
+        <div class="animated-background size6"></div>
+        <div class="animated-background size1"></div>
+      </div>
+    </div>
+
+    <div class="container" v-show="photo">
+      <div class="animated-background photo flex1"></div>
+    </div>
+
+    <div v-show="description">
+      <div class="container" v-for="x in number">
+        <div class="animated-background flex1"></div>
+      </div>
+
+      <div class="container">
+        <div class="animated-background size1"></div>
+      </div>
+    </div>
+
+    <div class="container" v-show="button">
+      <div class="animated-background size1"></div>
+    </div>
+  </div>
+
+
+
+
 
 
 
@@ -20,10 +77,43 @@
 
 <script>
 export default {
-  name: 'hello',
   data () {
-    return {
-
+    return {}
+  },
+  props: {
+    type: {
+      type: String,
+      required: true
+    },
+    title: {
+      type: Boolean,
+      required: false,
+      default: true
+    },
+    button: {
+      type: Boolean,
+      required: false,
+      default: true
+    },
+    number: {
+      type: Number,
+      required: false,
+      default: 1
+    },
+    buttonTitle: {
+      type: Boolean,
+      required: false,
+      default: true
+    },
+    photo: {
+      type: Boolean,
+      required: false,
+      default: true
+    },
+    description: {
+      type: Boolean,
+      required: false,
+      default: true
     }
   }
 }
@@ -155,6 +245,46 @@ export default {
   flex-grow: 6
 }
 
+.margin-top-10 {
+  margin-top: 10px
+}
+
+.margin-top-20 {
+  margin-top: 20px
+}
+
+.margin-top-30 {
+  margin-top: 30px
+}
+
+.margin-top-40 {
+  margin-top: 40px
+}
+
+.margin-top-50 {
+  margin-top: 50px
+}
+
+.margin-bottom-10 {
+  margin-bottom: 10px
+}
+
+.margin-bottom-20 {
+  margin-bottom: 20px
+}
+
+.margin-bottom-30 {
+  margin-bottom: 30px
+}
+
+.margin-bottom-40 {
+  margin-bottom: 40px
+}
+
+.margin-bottom-50 {
+  margin-bottom: 50px
+}
+
 @keyframes placeholder {
   0% {
     background-position: -600px 0
@@ -173,16 +303,18 @@ export default {
   background: #ddd;
   background: linear-gradient(to right, #ddd 8%, #ccc 18%, #ddd 33%);
   background-size: 1200px 100px;
-  min-height: 30px;
+  min-height: 20px;
   margin: 5px 5px 5px 0;
   border-radius: 3px;
   opacity: .5
 }
-
-.profile-image {
-  margin-top: 10px;
+.picture {
+  height: 80px;
+  width: 80px;
   border-radius: 50%;
-  width: 100px;
-  height: 100px
+  margin-right: 20px
+}
+.photo {
+  height: 300px;
 }
 </style>
