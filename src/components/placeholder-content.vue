@@ -7,10 +7,10 @@
     <div class="animated-background size1"></div>
   </div>
 
-  <div class="container column">
-    <div class="animated-background"></div>
-    <div class="animated-background"></div>
-    <div class="animated-background"></div>
+  <div class="container wrap">
+    <div class="animated-background size12"></div>
+    <div class="animated-background size12"></div>
+    <div class="animated-background size12"></div>
   </div>
 
 
@@ -32,16 +32,55 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .container {
-  display: flex;
-  flex-wrap: nowrap;
+  display: flex
 }
 
 .column {
-  flex-direction: column;
+  flex-direction: column
 }
 
 .wrap {
-  flex-wrap: wrap;
+  flex-wrap: wrap
+}
+
+.justify-content-start {
+  justify-content: flex-start
+}
+
+.justify-content-center {
+  justify-content: center
+}
+
+.justify-content-end {
+  justify-content: flex-end
+}
+
+.justify-content-between {
+  justify-content: space-between
+}
+
+.justify-content-around {
+  justify-content: space-around
+}
+
+.align-items-start {
+  align-items: flex-start
+}
+
+.align-items-center {
+  align-items: center
+}
+
+.align-items-end {
+  align-items: flex-end
+}
+
+.align-items-baseline {
+  align-items: baseline
+}
+
+.align-items-stretch {
+  align-items: stretch
 }
 
 .size1 {
@@ -67,6 +106,7 @@ export default {
 .size6 {
   flex-basis: 600px
 }
+
 .size8 {
   flex-basis: 800px
 }
