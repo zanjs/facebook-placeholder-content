@@ -6,10 +6,10 @@
       <h1>A flexible, responsive, touch-friendly palceholder content for Vue.js</h1>
       <div class="intro-buttons container align-items-center justify-content-center">
         <div class="">
-          <router-link class="btn start" :to="{ name: 'Home' }">GET STARTED</router-link>
+          <router-link class="btn start" :to="{ name: 'Docs' }">GET STARTED</router-link>
         </div>
         <div class="">
-          <router-link class="btn" :to="{ name: 'Home' }">GITHUB</router-link>
+          <a href="https://github.com/HelpySolutions/facebook-placeholder-content" class="btn" target="_blank">GITHUB</a>
         </div>
       </div>
     </div>
@@ -49,14 +49,17 @@ export default {
   min-height: 250px;
   padding-top: 100px
 }
+
 .intro .intro-block {
   width: 700px;
   max-width: 90%;
 }
+
 .intro .intro-block h1 {
   font-size: 2.5rem;
   font-weight: 500
 }
+
 .box {
   padding: 20px;
   box-sizing: border-box;
@@ -78,6 +81,7 @@ export default {
   font-weight: 600;
   padding-bottom: 20px
 }
+
 @media screen and (max-width: 480px) {
   .intro .intro-block h1 {
     font-size: 1.5rem;

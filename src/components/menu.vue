@@ -4,10 +4,12 @@
 <div class="relative-menu">
   <div class="menu-full">
     <div class="menu container justify-content-between align-items-center">
+      <router-link :to="{ name: 'Home' }">
       <div class="logo-menu container align-items-center">
         <img src="../assets/images/logo-01.svg" width="40" alt="">
-        <h1>Monk placeholder content</h1>
+        <h1>Monk Placeholder Content</h1>
       </div>
+      </router-link>
       <div class="link-menu">
         <ul class="container">
           <li><router-link :to="{ name: 'Home' }">Home</router-link></li>
@@ -25,9 +27,11 @@
 </template>
 
 <style scoped>
-.logo-menu h1 {
+.logo-menu h1,
+.logo-menu a {
   font-size: 20px;
-  margin-left: 10px
+  margin-left: 10px;
+  font-weight: 500
 }
 .link-menu ul.container {
   list-style: none;
