@@ -1,7 +1,6 @@
 <template>
 <div class="hello">
 
-
   <div class="" v-show="isLoading" v-cloak>
     <div class="container wrap">
       <div class="col-12 col-xl-4 col-lg-4 col-md-6 col-sm-12 box" v-for="x in 3">
@@ -30,8 +29,6 @@
       </div>
     </div>
   </div>
-
-
 
   <span class="btn start" :to="{ name: 'Docs' }" @click="tryAgain">Try again</span>
 
