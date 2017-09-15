@@ -39,8 +39,8 @@
         <div class="animated-background size1"></div>
       </div>
     </div>
-    <div class="container" v-show="photo">
-      <div class="animated-background photo flex1"></div>
+    <div class="container" v-show="photo" >
+      <div class="animated-background photo flex1" v-bind:style="{ 'height': + imageSize + 'px!important' }"></div>
     </div>
     <div v-show="description">
       <div class="container" v-for="x in number">
@@ -102,6 +102,11 @@ export default {
       type: Boolean,
       required: false,
       default: true
+    },
+    imageSize: {
+      type: Number,
+      required: false,
+      default: 200
     }
   }
 }

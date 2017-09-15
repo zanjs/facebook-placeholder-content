@@ -15,6 +15,7 @@
           <li><router-link :to="{ name: 'Home' }">Home</router-link></li>
           <li><router-link :to="{ name: 'Docs' }">Docs</router-link></li>
           <li><router-link :to="{ name: 'Examples' }">Examples</router-link></li>
+          <li><router-link :to="{ name: 'Testes' }">Testes</router-link></li>
         </ul>
       </div>
     </div>
