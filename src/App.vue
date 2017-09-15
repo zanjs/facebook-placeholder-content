@@ -47,6 +47,7 @@ a {
   font-weight: 700;
   border-radius: 20px;
   transition: all 0.15s ease;
+  cursor: pointer;
 }
 .btn:hover {
   background: #449872;

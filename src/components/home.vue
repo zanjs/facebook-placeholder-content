@@ -22,6 +22,13 @@
         <placeholderContent type="card" :photo="true" :title="true" :description="false" :number="1" :button="false"></placeholderContent>
       </div>
     </div>
+    <div class="container">
+<pre><code class="html" id="foo">
+  &lt;placeholderContent type=&quot;card&quot; :photo=&quot;true&quot; :title=&quot;true&quot; :description=&quot;false&quot; :number=&quot;1&quot; :button=&quot;false&quot;&gt;&lt;/placeholderContent&gt;
+
+</code></pre>
+<a class="btn btn-copy" data-clipboard-target="#foo">copy</a>
+    </div>
   </div>
 
 
@@ -45,6 +52,19 @@ export default {
 
 <style scoped>
 @import '../../node_modules/the-grid-flexbox/css/the-grid.min.css';
+.btn-copy {
+  height: 40px;
+  line-height: 20px
+}
+pre {
+  /*max-width: 90%;
+  margin: 0 auto*/
+  margin: 0 20px;
+}
+pre, code {
+  border-radius: 4px;
+  overflow: hidden
+}
 .intro {
   min-height: 250px;
   padding-top: 100px
